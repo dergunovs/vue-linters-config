@@ -1,5 +1,7 @@
 # Конфиги eslint, stylelint, prettier
 
+[npm](https://www.npmjs.com/package/vue-linters-config)
+
 _Легко принимать свободу как должное, если никогда её не лишался. (Дик Чейни)_
 
 Конфиги для Vue3 Composition API (script setup) + TS + SCSS + CSS Module.
