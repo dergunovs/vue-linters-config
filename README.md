@@ -1,4 +1,4 @@
-# Конфиги eslint, styleling, prettier
+# Конфиги eslint, stylelint, prettier
 
 _Легко принимать свободу как должное, если никогда её не лишался. (Дик Чейни)_
 
@@ -18,7 +18,7 @@ _Легко принимать свободу как должное, если н
 
 `"lint": "eslint '**/*.{js,ts,vue}' && stylelint '**/*.{scss,vue}'"`
 
-При работе в Windows возможно потребуется убрать кавычки:
+Версия для Windows без кавычек:
 
 `"lint": "eslint **/*.{js,ts,vue} && stylelint **/*.{scss,vue}"`
 
