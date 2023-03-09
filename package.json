@@ -1,7 +1,8 @@
 {
   "name": "vue-linters-config",
-  "private": true,
   "version": "0.0.1",
+  "description": "Vue 3 linters config for eslint, prettier, styleling",
+  "author": "Aleksandr Dergunov <a@dergunov.com> (https://dergunov.com)",
   "main": "./dist/index.umd.js",
   "files": [
     "dist"
@@ -10,7 +11,6 @@
     "build": "vite build"
   },
   "devDependencies": {
-    "@types/node": "18.14.6",
     "vite": "4.1.4"
   }
 }
