@@ -160,7 +160,7 @@ export default {
     "no-template-curly-in-string": "error",
     "no-throw-literal": "error",
     "no-undef-init": "error",
-    "no-underscore-dangle": "error",
+    "no-underscore-dangle": ["error", { allow: ["_id"] }],
     "no-unmodified-loop-condition": "error",
     "no-unneeded-ternary": "error",
     "no-unreachable-loop": "error",
