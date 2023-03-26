@@ -86,7 +86,6 @@ export default {
     "vue/no-multiple-objects-in-class": "error",
     "vue/no-multiple-slot-args": "error",
     "vue/no-restricted-call-after-await": "error",
-    "vue/no-restricted-class": ["error", "d-flex", "flex", "m-0", "m-2", "m-4", "p-0", "p-2", "p-4"],
     "vue/no-restricted-props": ["error", "value"],
     "vue/no-static-inline-styles": "error",
     "vue/no-template-target-blank": "error",
