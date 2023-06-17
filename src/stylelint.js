@@ -52,7 +52,7 @@ export default {
           "5rem",
         ],
         "font-weight": ["$font-weight", "300", "400", "500", "700"],
-        "line-height": ["1", "1.2", "1.5", "2"],
+        "line-height": ["1", "1.2", "1.3", "1.5", "2"],
         color: ["/^var/", "/^v-bind/", "unset"],
         "background-color": ["/^var/", "/^v-bind/", "unset"],
         "border-color": ["/^var/", "/^v-bind/", "unset"],
