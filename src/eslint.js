@@ -249,7 +249,7 @@ export default {
     '@typescript-eslint/member-ordering': 'error',
     '@typescript-eslint/method-signature-style': 'error',
     '@typescript-eslint/no-confusing-non-null-assertion': 'error',
-    '@typescript-eslint/no-dynamic-delete': 'error',
+    '@typescript-eslint/no-dynamic-delete': 'off',
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/no-invalid-void-type': 'error',
     '@typescript-eslint/no-shadow': 'error',
