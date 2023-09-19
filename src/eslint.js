@@ -129,7 +129,7 @@ export default {
     ],
     'max-depth': ['error', 4],
     'max-nested-callbacks': ['error', 4],
-    'max-params': ['error', 4],
+    'max-params': ['error', 5],
     'max-statements-per-line': ['error', { max: 1 }],
     'new-cap': ['error', { newIsCap: true, capIsNew: false, properties: true }],
     'no-array-constructor': 'error',
