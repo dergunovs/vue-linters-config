@@ -1,7 +1,7 @@
 export default {
   env: { 'shared-node-browser': true, es2022: true },
 
-  ignorePatterns: ['dist', 'coverage', 'public', 'storybook-static', 'node-modules', 'package-lock.json'],
+  ignorePatterns: ['dist', 'coverage', 'public', 'storybook-static', 'node-modules', 'package-lock.json', 'android'],
 
   extends: [
     'eslint:recommended',
@@ -104,7 +104,7 @@ export default {
     'vue/singleline-html-element-content-newline': 'off',
     'vue/this-in-template': 'error',
     'vue/v-for-delimiter-style': 'error',
-    'vue/v-on-event-hyphenation': ['error', 'never', { ignore: ['search-change'] }],
+    'vue/v-on-event-hyphenation': ['error', 'never'],
     'vue/v-on-function-call': 'error',
 
     'array-bracket-spacing': ['error', 'never'],
