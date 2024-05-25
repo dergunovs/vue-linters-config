@@ -6,7 +6,7 @@ _Легко принимать свободу как должное, если н
 
 Конфиги для Vue3 Composition API (script setup) + TS + SCSS + CSS Module.
 
-Редактор кода - VS Code с установленными плагинами ESLint, Prettier и Stylelint(не забыть в настройках добавить расширения файлов .vue и .scss).
+Редактор кода - VS Code с установленными плагинами ESLint, Prettier и Stylelint.
 
 ## Установка
 
@@ -14,13 +14,9 @@ _Легко принимать свободу как должное, если н
 
 Установка сторонних зависимостей:
 
-`npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier eslint-plugin-vue prettier stylelint stylelint-config-recess-order stylelint-config-recommended-scss stylelint-config-recommended-vue stylelint-prettier postcss-html --save-dev`
+`npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import-x eslint-plugin-prettier eslint-plugin-vue prettier stylelint stylelint-config-recess-order stylelint-config-recommended-scss stylelint-config-recommended-vue stylelint-prettier postcss-html --save-dev`
 
 В package.json добавить команду в секцию script для запуска npm run lint:
-
-`"lint": "eslint '**/*.{js,ts,vue}' && stylelint '**/*.{scss,vue}'"`
-
-Версия для Windows без кавычек:
 
 `"lint": "eslint **/*.{js,ts,vue} && stylelint **/*.{scss,vue}"`
 

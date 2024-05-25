@@ -5,21 +5,21 @@ export default {
 
   extends: [
     'eslint:recommended',
-    'plugin:import/recommended',
-    'plugin:import/typescript',
+    'plugin:import-x/recommended',
+    'plugin:import-x/typescript',
     'plugin:@typescript-eslint/recommended',
     'plugin:vue/vue3-strongly-recommended',
     'prettier',
   ],
 
-  plugins: ['import', '@typescript-eslint', 'vue', 'prettier'],
+  plugins: ['import-x', '@typescript-eslint', 'vue', 'prettier'],
 
   settings: {
-    'import/resolver': {
+    'import-x/resolver': {
       node: { extensions: ['.js', '.ts', '.mjs', '.d.ts'] },
     },
-    'import/ignore': 'vue',
-    'import/external-module-folders': ['node_modules', 'node_modules/@types'],
+    'import-x/ignore': 'vue',
+    'import-x/external-module-folders': ['node_modules', 'node_modules/@types'],
   },
 
   overrides: [
@@ -41,20 +41,6 @@ export default {
         ecmaVersion: 2022,
         sourceType: 'module',
         ecmaFeatures: { impliedStrict: true },
-      },
-    },
-    {
-      files: ['*.stories.ts'],
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        parser: '@typescript-eslint/parser',
-        ecmaVersion: 2022,
-        sourceType: 'module',
-        ecmaFeatures: { impliedStrict: true },
-      },
-      rules: {
-        '@typescript-eslint/no-type-alias': 'off',
-        '@typescript-eslint/no-shadow': 'off',
       },
     },
   ],
@@ -206,25 +192,25 @@ export default {
     quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
     yoda: ['error', 'never', { onlyEquality: true }],
 
-    'import/default': 'error',
-    'import/exports-last': 'error',
-    'import/first': 'error',
-    'import/named': 'error',
-    'import/newline-after-import': 'error',
-    'import/no-absolute-path': 'error',
-    'import/no-anonymous-default-export': 'error',
-    'import/no-cycle': 'error',
-    'import/no-empty-named-blocks': 'error',
-    'import/no-extraneous-dependencies': 'error',
-    'import/no-named-default': 'error',
-    'import/no-mutable-exports': 'error',
-    'import/no-relative-packages': 'error',
-    'import/no-self-import': 'error',
-    'import/no-unassigned-import': ['error', { allow: ['**/*.scss', '**/*.css'] }],
-    'import/no-unresolved': 'off',
-    'import/no-unused-modules': 'error',
-    'import/no-useless-path-segments': 'error',
-    'import/order': 'error',
+    'import-x/default': 'error',
+    'import-x/exports-last': 'error',
+    'import-x/first': 'error',
+    'import-x/named': 'error',
+    'import-x/newline-after-import': 'error',
+    'import-x/no-absolute-path': 'error',
+    'import-x/no-anonymous-default-export': 'error',
+    'import-x/no-cycle': 'error',
+    'import-x/no-empty-named-blocks': 'error',
+    'import-x/no-extraneous-dependencies': 'error',
+    'import-x/no-named-default': 'error',
+    'import-x/no-mutable-exports': 'error',
+    'import-x/no-relative-packages': 'error',
+    'import-x/no-self-import': 'error',
+    'import-x/no-unassigned-import': ['error', { allow: ['**/*.scss', '**/*.css'] }],
+    'import-x/no-unresolved': 'off',
+    'import-x/no-unused-modules': 'error',
+    'import-x/no-useless-path-segments': 'error',
+    'import-x/order': 'error',
 
     '@typescript-eslint/naming-convention': [
       'error',
