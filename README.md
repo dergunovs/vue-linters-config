@@ -1,4 +1,4 @@
-# Конфиги eslint, stylelint, prettier
+# Конфиги eslint flat, stylelint, prettier
 
 [npm](https://www.npmjs.com/package/vue-linters-config)
 
@@ -14,37 +14,33 @@ _Легко принимать свободу как должное, если н
 
 Установка сторонних зависимостей:
 
-`npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier eslint-plugin-vue prettier stylelint stylelint-config-recess-order stylelint-config-recommended-scss stylelint-config-recommended-vue stylelint-prettier postcss-html --save-dev`
+`npm i eslint eslint-config-prettier eslint-import-resolver-typescript postcss-html prettier stylelint stylelint-config-recess-order stylelint-config-recommended-scss stylelint-config-recommended-vue stylelint-prettier --save-dev`
 
 В package.json добавить команду в секцию script для запуска npm run lint:
-
-`"lint": "eslint '**/*.{js,ts,vue}' && stylelint '**/*.{scss,vue}'"`
-
-Версия для Windows без кавычек:
 
 `"lint": "eslint **/*.{js,ts,vue} && stylelint **/*.{scss,vue}"`
 
 ## Применение правил
 
-В корневой папке создать 3 файла: .eslintrc.cjs, prettier.config.cjs, stylelint.config.cjs.
+В корневой папке создать 3 файла: eslint.config.js, prettier.config.js, stylelint.config.js.
 
-.eslintrc.cjs:
+eslint.config.js:
 
 ```
-const { eslint } = require("vue-linters-config");
+import { eslint } from "vue-linters-config";
 module.exports = eslint;
 ```
 
-prettier.config.cjs:
+prettier.config.js:
 
 ```
-const { prettier } = require("vue-linters-config");
+import { prettier } from "vue-linters-config";
 module.exports = prettier;
 ```
 
-stylelint.config.cjs:
+stylelint.config.js:
 
 ```
-const { stylelint } = require("vue-linters-config");
+import { stylelint } from "vue-linters-config";
 module.exports = stylelint;
 ```

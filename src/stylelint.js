@@ -1,4 +1,4 @@
-export default {
+export const { stylelint } = {
   plugins: ['stylelint-prettier'],
 
   extends: [
