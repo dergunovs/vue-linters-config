@@ -1,4 +1,4 @@
-export const { prettier } = {
+export const prettier = {
   bracketSpacing: true,
   jsxSingleQuote: true,
   printWidth: 120,

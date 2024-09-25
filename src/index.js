@@ -1,5 +1,5 @@
-import { eslint } from './eslint';
+import { ignores, settings, rules } from './eslint';
 import { prettier } from './prettier';
 import { stylelint } from './stylelint';
 
-export { eslint, prettier, stylelint };
+export { ignores, settings, rules, prettier, stylelint };

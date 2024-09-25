@@ -1,4 +1,4 @@
-export const { stylelint } = {
+export const stylelint = {
   plugins: ['stylelint-prettier'],
 
   extends: [

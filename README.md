@@ -1,4 +1,4 @@
-# Конфиги eslint flat, stylelint, prettier
+# Конфиги eslint, stylelint, prettier
 
 [npm](https://www.npmjs.com/package/vue-linters-config)
 
@@ -14,7 +14,7 @@ _Легко принимать свободу как должное, если н
 
 Установка сторонних зависимостей:
 
-`npm i eslint eslint-config-prettier eslint-import-resolver-typescript postcss-html prettier stylelint stylelint-config-recess-order stylelint-config-recommended-scss stylelint-config-recommended-vue stylelint-prettier --save-dev`
+`npm i eslint @eslint/js typescript-eslint eslint-plugin-vue vue-eslint-parser eslint-plugin-import-x eslint-plugin-prettier globals eslint-config-prettier eslint-import-resolver-typescript postcss-html prettier stylelint stylelint-config-recess-order stylelint-config-recommended-scss stylelint-config-recommended-vue stylelint-prettier --save-dev`
 
 В package.json добавить команду в секцию script для запуска npm run lint:
 
@@ -27,20 +27,63 @@ _Легко принимать свободу как должное, если н
 eslint.config.js:
 
 ```
-import { eslint } from "vue-linters-config";
-module.exports = eslint;
+import js from '@eslint/js';
+import tseslint from 'typescript-eslint';
+import pluginVue from 'eslint-plugin-vue';
+import vueParser from 'vue-eslint-parser';
+import eslintPluginImportX from 'eslint-plugin-import-x';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import globals from 'globals';
+import { ignores, settings, rules } from 'vue-linters-config';
+
+export default tseslint.config(
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
+  ...pluginVue.configs['flat/strongly-recommended'],
+  eslintPluginImportX.flatConfigs.recommended,
+  eslintPluginImportX.flatConfigs.typescript,
+
+  ignores,
+
+  {
+    files: ['**/*.{ts,tsx,vue}'],
+    languageOptions: { parser: tseslint.parser },
+  },
+  {
+    files: ['**/*.vue'],
+    languageOptions: { parser: vueParser, parserOptions: { parser: tseslint.parser } },
+  },
+
+  {
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      globals: { ...globals.browser, ...globals.node, ymaps: 'writable' },
+    },
+
+    ...settings,
+    ...rules,
+  },
+
+  eslintPluginPrettierRecommended
+);
+
 ```
 
 prettier.config.js:
 
 ```
-import { prettier } from "vue-linters-config";
-module.exports = prettier;
+import { prettier } from 'vue-linters-config';
+
+export default prettier;
+
 ```
 
 stylelint.config.js:
 
 ```
-import { stylelint } from "vue-linters-config";
-module.exports = stylelint;
+import { stylelint } from 'vue-linters-config';
+
+export default stylelint;
+
 ```
