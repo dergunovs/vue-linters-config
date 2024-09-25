@@ -1,3 +1,26 @@
+function parser(vueParser, tsParser) {
+  return (
+    {
+      files: ['**/*.{ts,tsx,vue}'],
+      languageOptions: { parser: tsParser },
+    },
+    {
+      files: ['**/*.vue'],
+      languageOptions: { parser: vueParser, parserOptions: { parser: tsParser } },
+    }
+  );
+}
+
+function options(globals) {
+  return {
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      globals: { ...globals.browser, ...globals.node, ymaps: 'writable' },
+    },
+  };
+}
+
 const ignores = {
   ignores: [
     '**/dist/',
@@ -235,4 +258,4 @@ const rules = {
   },
 };
 
-export { ignores, settings, rules };
+export { parser, options, ignores, settings, rules };

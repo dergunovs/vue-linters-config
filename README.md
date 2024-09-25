@@ -34,7 +34,7 @@ import vueParser from 'vue-eslint-parser';
 import eslintPluginImportX from 'eslint-plugin-import-x';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import globals from 'globals';
-import { ignores, settings, rules } from 'vue-linters-config';
+import { parser, options, ignores, settings, rules } from 'vue-linters-config';
 
 export default tseslint.config(
   js.configs.recommended,
@@ -44,26 +44,8 @@ export default tseslint.config(
   eslintPluginImportX.flatConfigs.typescript,
 
   ignores,
-
-  {
-    files: ['**/*.{ts,tsx,vue}'],
-    languageOptions: { parser: tseslint.parser },
-  },
-  {
-    files: ['**/*.vue'],
-    languageOptions: { parser: vueParser, parserOptions: { parser: tseslint.parser } },
-  },
-
-  {
-    languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: 'module',
-      globals: { ...globals.browser, ...globals.node, ymaps: 'writable' },
-    },
-
-    ...settings,
-    ...rules,
-  },
+  parser(vueParser, tseslint.parser),
+  { ...options(globals), ...settings, ...rules },
 
   eslintPluginPrettierRecommended
 );
