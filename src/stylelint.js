@@ -17,10 +17,10 @@ export const stylelint = {
     'declaration-property-unit-allowed-list': [
       {
         'font-size': ['rem'],
-        width: ['px', '%', 'vw'],
-        height: ['px', '%', 'vh'],
-        'max-width': ['px', '%', 'vw'],
-        'max-height': ['px', '%', 'vh'],
+        width: ['px', '%', 'vw', 'dvw'],
+        height: ['px', '%', 'vh', 'dvh'],
+        'max-width': ['px', '%', 'vw', 'dvw'],
+        'max-height': ['px', '%', 'vh', 'dvh'],
         gap: ['px', '%'],
         'grid-gap': ['px', '%'],
         '/^border/': ['px', '%'],
@@ -74,7 +74,7 @@ export const stylelint = {
     'selector-class-pattern': '^[a-z][a-zA-Z0-9]+$|.',
     'selector-pseudo-class-no-unknown': null,
     'time-min-milliseconds': 100,
-    'unit-allowed-list': ['px', 'rem', '%', 'vh', 'vw', 'ms', 'deg', 'fr'],
+    'unit-allowed-list': ['px', 'rem', '%', 'vh', 'dvh', 'vw', 'dvw', 'ms', 'deg', 'fr'],
     'value-keyword-case': ['lower', { ignoreFunctions: ['v-bind'] }],
 
     'prettier/prettier': true,
