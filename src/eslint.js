@@ -24,6 +24,7 @@ function options(globals) {
 const ignores = {
   ignores: [
     '**/dist/',
+    '**/dev-dist/',
     '**/coverage/',
     '**/public/',
     '**/storybook-static/',
