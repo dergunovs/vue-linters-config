@@ -46,6 +46,7 @@ const rules = {
   rules: {
     'vue/attribute-hyphenation': ['error', 'never', { ignore: ['hide-details'] }],
     'vue/block-lang': ['error', { script: { lang: 'ts' } }],
+    'vue/block-order': ['error', { order: ['template', 'script', 'style'] }],
     'vue/block-tag-newline': ['error', { singleline: 'always', multiline: 'always' }],
     'vue/comment-directive': 'error',
     'vue/component-api-style': ['error', ['script-setup']],
@@ -55,7 +56,6 @@ const rules = {
       { ignores: ['component', '/v-/'], registeredComponentsOnly: false },
     ],
     'vue/component-options-name-casing': ['error', 'PascalCase'],
-    'vue/component-tags-order': ['error', { order: ['template', 'script', 'style'] }],
     'vue/custom-event-name-casing': ['error', 'camelCase'],
     'vue/define-macros-order': ['error', { order: ['defineProps', 'defineEmits'] }],
     'vue/eqeqeq': 'error',
@@ -84,7 +84,6 @@ const rules = {
     'vue/this-in-template': 'error',
     'vue/v-for-delimiter-style': 'error',
     'vue/v-on-event-hyphenation': ['error', 'never'],
-    'vue/v-on-function-call': 'error',
 
     'array-bracket-spacing': ['error', 'never'],
     'array-callback-return': 'error',
