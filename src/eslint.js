@@ -92,7 +92,7 @@ const rules = {
     'comma-dangle': ['error', 'only-multiline'],
     'comma-spacing': ['error', { before: false, after: true }],
     'comma-style': ['error', 'last'],
-    complexity: ['error', 12],
+    complexity: ['error', 14],
     curly: ['error', 'multi-line'],
     'default-param-last': 'error',
     'func-name-matching': 'error',
