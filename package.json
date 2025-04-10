@@ -1,6 +1,6 @@
 {
   "name": "vue-linters-config",
-  "version": "0.3.13",
+  "version": "0.3.14",
   "type": "module",
   "description": "Vue 3 linters config for eslint, prettier, stylelint",
   "author": "Aleksandr Dergunov <dergunovs@mail.ru>",
@@ -12,7 +12,7 @@
     "build": "vite build"
   },
   "devDependencies": {
-    "vite": "6.2.5"
+    "vite": "6.2.6"
   },
   "engines": {
     "npm": ">=11.2.0",
