@@ -8,4 +8,6 @@ export const prettier = {
   trailingComma: 'es5',
   useTabs: false,
   bracketSameLine: false,
+  arrowParens: 'always',
+  endOfLine: 'lf',
 };
