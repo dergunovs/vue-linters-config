@@ -82,7 +82,6 @@ export const stylelint = {
     'selector-max-compound-selectors': 4,
     'selector-max-specificity': '0,7,0',
     'shorthand-property-no-redundant-values': true,
-    'string-quotes': 'single',
     'unit-disallowed-list': ['pt', 'pc', 'in', 'cm', 'mm'],
     'value-no-vendor-prefix': true,
 
