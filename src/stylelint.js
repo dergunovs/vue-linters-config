@@ -77,7 +77,6 @@ export const stylelint = {
     'unit-allowed-list': ['px', 'rem', '%', 'vh', 'dvh', 'vw', 'dvw', 'ms', 'deg', 'fr'],
     'value-keyword-case': ['lower', { ignoreFunctions: ['v-bind'] }],
     'function-name-case': ['lower', { ignoreFunctions: ['v-bind'] }],
-    'keyframes-name-pattern': '/^[a-z][a-zA-Z0-9]+$/',
     'media-feature-name-value-no-unknown': true,
     'selector-max-compound-selectors': 4,
     'selector-max-specificity': '0,7,0',
