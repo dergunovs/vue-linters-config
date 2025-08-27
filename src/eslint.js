@@ -232,6 +232,7 @@ const rules = {
     'unicorn/no-array-for-each': 'off',
     'unicorn/numeric-separators-style': 'off',
     'unicorn/no-array-reduce': 'off',
+    'unicorn/prefer-string-replace-all': 'off',
 
     '@typescript-eslint/naming-convention': [
       'error',
