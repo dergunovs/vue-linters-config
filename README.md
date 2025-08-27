@@ -14,7 +14,7 @@ _Легко принимать свободу как должное, если н
 
 Установка сторонних зависимостей:
 
-`npm i eslint @eslint/js typescript-eslint eslint-plugin-vue vue-eslint-parser eslint-plugin-import-x eslint-plugin-prettier globals eslint-config-prettier eslint-import-resolver-typescript postcss-html prettier stylelint stylelint-config-recess-order stylelint-config-recommended-scss stylelint-config-recommended-vue stylelint-prettier --save-dev`
+`npm i eslint @eslint/js typescript-eslint eslint-plugin-vue vue-eslint-parser eslint-plugin-import-x eslint-plugin-prettier eslint-plugin-sonarjs eslint-plugin-unicorn globals eslint-config-prettier eslint-import-resolver-typescript postcss-html prettier stylelint stylelint-config-recess-order stylelint-config-recommended-scss stylelint-config-recommended-vue stylelint-prettier --save-dev`
 
 В package.json добавить команду в секцию script для запуска npm run lint:
 
@@ -29,10 +29,12 @@ eslint.config.js:
 ```
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
-import pluginVue from 'eslint-plugin-vue';
 import vueParser from 'vue-eslint-parser';
-import eslintPluginImportX from 'eslint-plugin-import-x';
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import pluginVue from 'eslint-plugin-vue';
+import pluginImportX from 'eslint-plugin-import-x';
+import pluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import pluginSonar from 'eslint-plugin-sonarjs';
+import pluginUnicorn from 'eslint-plugin-unicorn';
 import globals from 'globals';
 import { parser, options, ignores, settings, rules } from 'vue-linters-config';
 
@@ -41,6 +43,8 @@ export default tseslint.config(
   ...tseslint.configs.recommended,
   ...pluginVue.configs['flat/strongly-recommended'],
   eslintPluginImportX.flatConfigs.recommended,
+  eslintPluginSonar.configs.recommended,
+  eslintPluginUnicorn.configs.recommended,
   eslintPluginImportX.flatConfigs.typescript,
 
   ignores,
@@ -55,17 +59,13 @@ export default tseslint.config(
 prettier.config.js:
 
 ```
-import { prettier } from 'vue-linters-config';
-
-export default prettier;
+export { prettier as default } from 'vue-linters-config';
 
 ```
 
 stylelint.config.js:
 
 ```
-import { stylelint } from 'vue-linters-config';
-
-export default stylelint;
+export { stylelint as default } from 'vue-linters-config';
 
 ```
