@@ -42,16 +42,16 @@ export default tseslint.config(
   js.configs.recommended,
   ...tseslint.configs.recommended,
   ...pluginVue.configs['flat/strongly-recommended'],
-  eslintPluginImportX.flatConfigs.recommended,
-  eslintPluginSonar.configs.recommended,
-  eslintPluginUnicorn.configs.recommended,
-  eslintPluginImportX.flatConfigs.typescript,
+  pluginImportX.flatConfigs.recommended,
+  pluginSonar.configs.recommended,
+  pluginUnicorn.configs.recommended,
+  pluginImportX.flatConfigs.typescript,
 
   ignores,
   parser(vueParser, tseslint.parser),
   { ...options(globals), ...settings, ...rules },
 
-  eslintPluginPrettierRecommended
+  pluginPrettierRecommended
 );
 
 ```
