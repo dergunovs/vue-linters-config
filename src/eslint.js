@@ -223,6 +223,8 @@ const rules = {
 
     'sonarjs/no-hardcoded-passwords': 'off',
     'sonarjs/no-duplicated-branches': 'off',
+    'sonarjs/no-invariant-returns': 'off',
+    'sonarjs/pseudo-random': 'off',
 
     'unicorn/prevent-abbreviations': 'off',
     'unicorn/no-null': 'off',
@@ -233,6 +235,9 @@ const rules = {
     'unicorn/numeric-separators-style': 'off',
     'unicorn/no-array-reduce': 'off',
     'unicorn/prefer-string-replace-all': 'off',
+    'unicorn/no-document-cookie': 'off',
+    'unicorn/consistent-function-scoping': 'off',
+    'unicorn/no-array-reverse': 'off',
 
     '@typescript-eslint/naming-convention': [
       'error',
