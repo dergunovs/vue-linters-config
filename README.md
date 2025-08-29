@@ -27,16 +27,20 @@ _Легко принимать свободу как должное, если н
 eslint.config.js:
 
 ```
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
-import vueParser from 'vue-eslint-parser';
 import pluginVue from 'eslint-plugin-vue';
+import vueParser from 'vue-eslint-parser';
 import pluginImportX from 'eslint-plugin-import-x';
 import pluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import pluginSonar from 'eslint-plugin-sonarjs';
 import pluginUnicorn from 'eslint-plugin-unicorn';
 import globals from 'globals';
 import { parser, options, ignores, settings, rules } from 'vue-linters-config';
+
+const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default tseslint.config(
   js.configs.recommended,
@@ -48,7 +52,7 @@ export default tseslint.config(
   pluginImportX.flatConfigs.typescript,
 
   ignores,
-  parser(vueParser, tseslint.parser),
+  parser(vueParser, tseslint.parser, dirname),
   { ...options(globals), ...settings, ...rules },
 
   pluginPrettierRecommended

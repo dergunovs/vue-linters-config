@@ -1,14 +1,31 @@
-function parser(vueParser, tsParser) {
-  return (
+function parser(vueParser, tsParser, tsconfigRootDir) {
+  const rootDir = tsconfigRootDir || import.meta.dirname;
+
+  return [
     {
       files: ['**/*.{ts,tsx,vue}'],
-      languageOptions: { parser: tsParser },
+      languageOptions: {
+        parser: tsParser,
+        parserOptions: {
+          projectService: true,
+          tsconfigRootDir: rootDir,
+          extraFileExtensions: ['.vue'],
+        },
+      },
     },
     {
       files: ['**/*.vue'],
-      languageOptions: { parser: vueParser, parserOptions: { parser: tsParser } },
-    }
-  );
+      languageOptions: {
+        parser: vueParser,
+        parserOptions: {
+          parser: tsParser,
+          projectService: true,
+          tsconfigRootDir: rootDir,
+          extraFileExtensions: ['.vue'],
+        },
+      },
+    },
+  ];
 }
 
 function options(globals) {
