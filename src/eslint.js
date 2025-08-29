@@ -242,6 +242,7 @@ const rules = {
     'sonarjs/no-duplicated-branches': 'off',
     'sonarjs/no-invariant-returns': 'off',
     'sonarjs/pseudo-random': 'off',
+    'sonarjs/no-misleading-array-reverse': 'off',
 
     'unicorn/prevent-abbreviations': 'off',
     'unicorn/no-null': 'off',
