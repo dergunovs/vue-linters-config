@@ -43,15 +43,16 @@ function options(globals) {
 
 const ignores = {
   ignores: [
-    '**/dist/',
-    '**/dev-dist/',
-    '**/coverage/',
-    '**/public/',
-    '**/storybook-static/',
-    '**/node_modules/',
-    '**/package-lock.json',
-    '**/android/',
-    '**/.storybook/',
+    'dist/',
+    'dev-dist/',
+    'coverage/',
+    'public/',
+    'storybook-static/',
+    'node_modules/',
+    'android/',
+    '.storybook/',
+    'package-lock.json',
+    'vitest.setup.ts',
   ],
 };
 
