@@ -1,15 +1,14 @@
-function parser(vueParser, tsParser, tsconfigRootDir) {
-  const rootDir = tsconfigRootDir || import.meta.dirname;
+function parser(vueParser, tsParser, pathToDir) {
+  const dirname = pathToDir || import.meta.dirname;
 
   return [
     {
-      files: ['**/*.{ts,tsx,vue}'],
+      files: ['**/*.ts'],
       languageOptions: {
         parser: tsParser,
         parserOptions: {
-          projectService: true,
-          tsconfigRootDir: rootDir,
-          extraFileExtensions: ['.vue'],
+          project: ['./tsconfig.json', './tsconfig.node.json'],
+          tsconfigRootDir: dirname,
         },
       },
     },
@@ -19,11 +18,15 @@ function parser(vueParser, tsParser, tsconfigRootDir) {
         parser: vueParser,
         parserOptions: {
           parser: tsParser,
-          projectService: true,
-          tsconfigRootDir: rootDir,
+          project: ['./tsconfig.json', './tsconfig.node.json'],
+          tsconfigRootDir: dirname,
           extraFileExtensions: ['.vue'],
         },
       },
+    },
+    {
+      files: ['eslint.config.js', 'vite.config.ts'],
+      languageOptions: { parserOptions: { project: false } },
     },
   ];
 }

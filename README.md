@@ -52,11 +52,14 @@ export default tseslint.config(
   pluginImportX.flatConfigs.typescript,
 
   ignores,
+
   parser(vueParser, tseslint.parser, dirname),
+
   { ...options(globals), ...settings, ...rules },
 
   pluginPrettierRecommended
 );
+
 
 ```
 
