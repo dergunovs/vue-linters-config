@@ -51,6 +51,7 @@ const ignores = {
     '**/node_modules/',
     '**/package-lock.json',
     '**/android/',
+    '**/.storybook/',
   ],
 };
 
@@ -246,6 +247,7 @@ const rules = {
     'sonarjs/no-invariant-returns': 'off',
     'sonarjs/pseudo-random': 'off',
     'sonarjs/no-misleading-array-reverse': 'off',
+    'sonarjs/function-return-type': 'off',
 
     'unicorn/prevent-abbreviations': 'off',
     'unicorn/no-null': 'off',
