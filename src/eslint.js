@@ -250,6 +250,8 @@ const rules = {
     'sonarjs/no-misleading-array-reverse': 'off',
     'sonarjs/function-return-type': 'off',
 
+    'unicorn/prefer-includes': 'off',
+    'unicorn/no-array-sort': 'off',
     'unicorn/prevent-abbreviations': 'off',
     'unicorn/no-null': 'off',
     'unicorn/filename-case': ['error', { cases: { camelCase: true, pascalCase: true } }],
