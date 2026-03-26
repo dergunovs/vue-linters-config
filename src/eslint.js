@@ -239,7 +239,7 @@ const rules = {
     'import-x/no-self-import': 'error',
     'import-x/no-unassigned-import': ['error', { allow: ['**/*.scss', '**/*.css'] }],
     'import-x/no-unresolved': 'off',
-    'import-x/no-unused-modules': ['error', { suppressMissingFileEnumeratorAPIWarning: true }],
+    'import-x/no-unused-modules': 'off',
     'import-x/no-useless-path-segments': 'error',
     'import-x/order': 'error',
 
