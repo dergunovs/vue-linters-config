@@ -14,7 +14,7 @@ _Легко принимать свободу как должное, если н
 
 Установка сторонних зависимостей:
 
-`npm i eslint @eslint/js typescript-eslint eslint-plugin-vue vue-eslint-parser eslint-plugin-import-x eslint-plugin-prettier eslint-plugin-sonarjs eslint-plugin-unicorn globals eslint-config-prettier eslint-import-resolver-typescript postcss-html prettier stylelint stylelint-config-recess-order stylelint-config-recommended-scss stylelint-config-recommended-vue stylelint-prettier --save-dev`
+`npm i eslint @eslint/js typescript-eslint eslint-plugin-vue vue-eslint-parser eslint-plugin-import-x eslint-plugin-prettier eslint-plugin-sonarjs eslint-plugin-unicorn globals eslint-config-prettier eslint-import-resolver-typescript postcss-html prettier stylelint stylelint-order stylelint-config-recess-order stylelint-config-recommended-scss stylelint-config-recommended-vue stylelint-prettier --save-dev`
 
 В package.json добавить команду в секцию script для запуска npm run lint:
 
