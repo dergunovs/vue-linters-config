@@ -258,12 +258,16 @@ const rules = {
     'unicorn/no-array-callback-reference': 'off',
     'unicorn/no-useless-undefined': 'off',
     'unicorn/no-array-for-each': 'off',
+    'unicorn/name-replacements': 'off',
+    'unicorn/prefer-iterator-to-array': 'off',
     'unicorn/numeric-separators-style': 'off',
     'unicorn/no-array-reduce': 'off',
     'unicorn/prefer-string-replace-all': 'off',
     'unicorn/no-document-cookie': 'off',
     'unicorn/consistent-function-scoping': 'off',
     'unicorn/no-array-reverse': 'off',
+    'unicorn/no-top-level-side-effects': 'off',
+    'unicorn/prefer-group-by': 'off',
 
     '@typescript-eslint/naming-convention': [
       'error',
